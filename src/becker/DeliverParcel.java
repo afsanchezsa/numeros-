@@ -82,7 +82,7 @@ public class DeliverParcel
     salir_del_cuarto(karel);
     recorrer_cuarto(matriz,karel,7);
   int numero3=comparar_matrices(matriz);
-  System.out.println(numero1+""+numero2+""+numero3);
+  System.out.println("los numeros en los cuartos son "+numero1+""+numero2+""+numero3);
   
  
        
@@ -103,7 +103,7 @@ public class DeliverParcel
      // karel.putThing();
       karel.move();*/
       
-      System.out.println(karel.countThingsInBackpack());
+      //System.out.println(karel.countThingsInBackpack());
    }
       public static void llenarmatriz(boolean [][]matriz){
       for(int i=0;i<5;i++){
