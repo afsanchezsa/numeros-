@@ -38,7 +38,7 @@ public class Tienda {
             System.out.println("INSERTE EL ISBN");
             int ISBN=entrada.nextInt();
              System.out.println("INSERTE EL NOMBRE");
-        String nombre=entrada.next();
+        String nombre=entrada.nextLine();
         int precio=entrada.nextInt();
         micarro.agregar_libro(ISBN, nombre, precio);
         
@@ -49,11 +49,13 @@ public class Tienda {
                   int ISBNBUSCAR=entrada.nextInt();
                   System.out.println("el subtotal de ejemplares del libro "+ISBNBUSCAR+" es "+micarro.subtotal(ISBNBUSCAR));
               }else if(entrada.nextInt()==0){
-              
+                  System.out.println("el total es "+micarro.total());
               }
         }
         }
     
+     System.out.println("desea continuar en la tienda? (1/0)");
+         seguir_en_tienda=entrada.nextInt();
     
     }
     
@@ -87,5 +89,14 @@ subtotal+=mislibros[n].precio;
 }
 }
 return subtotal;
+}
+public int total(){
+int total=0;
+    for(int n=0;n<i;n++){
+
+total+=mislibros[n].precio;
+
+}
+return total;
 }
 }
