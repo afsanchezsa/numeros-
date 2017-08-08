@@ -99,4 +99,12 @@ total+=mislibros[n].precio;
 }
 return total;
 }
+public void borrar(int ISBNBORRAR){
+for(int n=0;n<i;i++){
+if(mislibros[n].ISBN==ISBNBORRAR){
+mislibros[n]=new Libro(0," ", 0);
+
+}
+}
+}
 }
