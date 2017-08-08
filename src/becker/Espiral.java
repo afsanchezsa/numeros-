@@ -5,6 +5,8 @@
  */
 package becker;
 import becker.robots.*;
+import java.util.*;
+
 /**
  *
  * @author USUARIO
@@ -18,10 +20,14 @@ public class Espiral {
         // TODO code application logic here
    City prague=new City();
         Robot karel=new Robot(prague,1,0,Direction.EAST);
-    karel.move();
+    System.out.println("ingrese el tamaño de la matriz");
+    Scanner entrada=new Scanner(System.in);
+    int tamano=entrada.nextInt();
+        karel.move();
     karel.move();
     Thing cosa=new Thing(prague,karel.getStreet(),karel.getAvenue());
-    recorrer_espiral(prague,karel,5,0);
+    
+    recorrer_espiral(prague,karel,tamano-1,0);
     }
     public static void recorrer_espiral(City ciudad,Robot robot,int tamano, int disparador){
 
